@@ -84,7 +84,13 @@ if(LoggedInfromGooogle || LoggedInfromEmail){
 //*&& and operator
 //   || logical operator
 
+// Nullish Coalescing Operator (??): Works on only null/undefined values
+let val1;
+val1 = null ?? 10; // Output: val1 => 10
 
+val1 = undefined ?? 15;// Output: val1 => 15
+
+val1 = null ?? 10 ?? 20;// Output: val1 => 10
 
 
 
