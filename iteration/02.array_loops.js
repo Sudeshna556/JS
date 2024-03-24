@@ -54,6 +54,47 @@ const myObject = {
         2. We can't use for-in loop for Map iteration (this map is non-iterable)
 **/ 
 
+    /**********forEach() loop***********/
+
+    /** arrayname.foreach(function functionName(functionName as parameter) {})*/
+
+    const languages = ["JS","Java","Ruby","Python"]
+    languages.forEach((items) => {
+        console.log(items);
+    })
+
+     // ** Access objects of an array by using forEach() loop
+
+        const user =[
+            {
+                userName: "sudeshna",
+                userPassword:567
+
+            },
+
+            {
+                userName: "Sid",
+                userPassword:5597
+
+            },
+
+            {
+                userName: "Saba",
+                userPassword:6654
+
+            }
+        ]
+        user.forEach( (objectItems) =>{
+                console.log(objectItems.userName);
+        }
+        )
+
+
+
+
+
+
+
    
         
 
