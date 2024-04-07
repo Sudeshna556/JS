@@ -40,7 +40,7 @@ const bigNumber = 5465246257627626778789n;
 console.log(typeof bigNumber);
 
 //Arrays:
-const heros = ["Sayan", "Ananya"];
+const heros = ["Sudeshna", "Sam"];
 console.log(typeof heros);
 
 //Objects:
