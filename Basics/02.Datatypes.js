@@ -45,7 +45,7 @@ console.log(typeof heros);
 
 //Objects:
 let myObj = {
-  name: "Sayan",
+  name: "Sudeshna",
   age: 21,
 };
 console.log(typeof myObj);
