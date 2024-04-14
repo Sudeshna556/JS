@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Learning</h2>
+    <button id = "stop">stop</button>
+    
+</body>
+<script>
+    // setTimeout(function(){ // it calls a function after a number of milliseconds
+    //     console.log("sudeshna")
+    // },2000) // it waits for 2 sec then prints the name
+
+    // setInterval(function(){
+    //     console.log("it repeats me")
+    // },1000)
+
+   // clearTimeout,clearInterval to prevent this functions 
+
+
+        const greet = function(){
+            console.log("hi..there!!");
+        }
+        // lets change the msg in h1 tag
+       const changetext = function(){
+        document.querySelector('h2').innerHTML = "I am learning JS"
+       }
+       const changeMe = setTimeout(changetext,3000)
+
+       // to stop the timeout func
+         document.querySelector ('#stop').addEventListener('click',function(){
+            clearTimeout(changeMe);
+            console.log("STOPPED TIMEOUT")
+        })
+       
+       
+        
+       
+        setTimeout(greet,2000)
+
+
+
+
+</script>
+</html>
