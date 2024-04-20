@@ -58,7 +58,7 @@
       //let error = false; 
         if(!error){
           // if not error then resolve
-          resolve({username:"sid",email: "hello@gmail.com"})
+          resolve({username:"sid",email: "hello@gmail.com"}) //passing object 
         }else {
           // else give an error
            reject('error: something went wrong')
@@ -66,9 +66,9 @@
 
   },1000)
 
-  // consume promise num 4
+  // consume promise num 4 (.then and .catch)
        
-      //promiseFourth.then().catch() --> .then is used to accesse values of resolve() and .catch is used for error or reject
+      //promiseFourth.then().catch() --> .then is used to access values of resolve() and .catch is used for error or reject
 
         promiseFourth.then((user)=>{
           console.log(user);
@@ -79,6 +79,46 @@
               console.log(error)
         }).finally(()=>console.log("promise is either resolved or rejected")) // default case
 
-        // let error = false; incase of false it will print the username value
+        // let error = false; incase of false it will  print the username value
       
-       
+  
+
+// Promise number 5  
+
+    const promiseFive =  new Promise(function(resolve, reject){
+      
+      setTimeout(function(){
+        let error = true
+        if(!error){
+          resolve({username:"JS", password:"123"})
+        }
+        else{
+          reject("ERROR: opps! JS went wrong!")
+        }
+
+     },1000)
+  })
+
+  // consume using async await
+
+  async function consumePromise(){
+          //await keyword
+          try{   // try and catch 
+            const response =  await consumePromise
+            console.log(response);
+            }catch(error){
+                  console.log(error)
+          }
+  }
+
+  async function fetchData(){
+    try{
+      const response = await fetch ("https://jsonplaceholder.typicode.com/users") //dummy data
+      const data = await response.json() //converting to json
+      console.log(data);
+    }
+    catch(error){
+        console.log("error");
+    }
+    fetchData();
+  }
